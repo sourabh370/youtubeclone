@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-left">
+      <i class="fas fa-bars"></i>
+      <img src="youtube-logo-2431.png" alt="YouTube Logo" class="logo">
+      <span>YouTube</span>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="header-right">
+      <i class="fas fa-home"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-user"></i>
+      <i class="fas fa-cog"></i>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Trending</a>
+    <a href="#">Subscriptions</a>
+    <a href="#">Library</a>
+    <a href="#">History</a>
+    <a href="#">Watch Later</a>
+    <a href="#">Downloads</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="categories">
+      <button onclick="fetchVideos('gaming')">Gaming</button>
+      <button onclick="fetchVideos('movies')">Movies</button>
+      <button onclick="fetchVideos('live')">Live</button>
+      <button onclick="fetchVideos('sports')">Sports</button>
+      <button onclick="fetchVideos('trending')">Trending</button>
+      <button onclick="fetchVideos('shorts')">Shorts</button>
+    </div>
+
+    <div id="videoContainer" class="video-grid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-info">
+          <h4>Awesome Music Video</h4>
+          <p>Music Channel · 5.7M views · 1 month ago</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" frameborder="0" allowfullscreen></iframe>
+        <div class="video-info">
+          <h4>Despacito | Luis Fonsi</h4>
+          <p>VEVO · 8B views · 5 years ago</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" frameborder="0" allowfullscreen></iframe>
+        <div class="video-info">
+          <h4>Despacito | Luis Fonsi</h4>
+          <p>VEVO · 8B views · 5 years ago</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

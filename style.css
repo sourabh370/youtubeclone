@@ -1,0 +1,199 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background: #000;
+}
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181818;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-left .logo {
+    width: 40px;
+    height: 40px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #303030;
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 50%;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color:#ffffff;
+}
+
+.search-container button {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-container button:hover {
+    color: #ff0000;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 150px;
+    background: #202020;
+    height: 100vh;
+    color: #aaaaaa;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ff0000;
+}
+
+/* Main Content */
+.content {
+    margin-left: 150px;
+    padding: 20px;
+    background: #121212;
+    min-height: 100vh;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.categories button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #303030;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categories button:hover {
+    background: #ff0000;
+}
+
+.video-grid {
+    display:flex;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+#videoContainer{
+    display: flex;
+    justify-content: center;
+}
+.video-card {
+    background: #181818;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    width: 20rem;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* .video-card img {
+    width: 100%;
+    border-radius: 10px;
+} */
+
+.video-card h3, .video-card p {
+    color: white;
+}
+
+/* Container styling */
+#videoContainer {
+    display: flex;       /* Display videos in a line */
+    flex-wrap: wrap;      /* Wrap the videos if the row overflows */
+    justify-content: flex-start;  
+    gap: 20px;            /* Add spacing between videos */
+    padding: 20px;
+}
+
+/* Individual video card styling */
+.video-card {
+    width: 320px;         /* Set fixed width */
+    height: 250px;        /* Set fixed height */
+    background: #1e1e1e;  /* Dark background */
+    border-radius: 10px;  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  
+    transition: transform 0.3s ease;
+    overflow: hidden;      /* Hide overflow */
+    cursor: pointer;       /* Make it look clickable */
+}
+
+.video-card:hover {
+    transform: scale(1.05);  /* Add hover effect */
+}
+
+/* Styling for the thumbnail */
+.video-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;      /* Maintain aspect ratio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Styling for the title and channel name */
+.video-card h3 {
+    margin: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    white-space: nowrap;    /* Prevents text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add "..." for long titles */
+}
+
+.video-card p {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
